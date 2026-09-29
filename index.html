@@ -2,106 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Joel Maison — Data, AI and Analytics portfolio.">
-  <title>Joel Maison — Data, AI & Analytics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Joel Maison is a Carnegie Mellon graduate student building across data, AI and analytics. Work in RAG, environmental analytics and cloud infrastructure.">
+  <meta name="theme-color" content="#f5f3ed">
+  <title>Joel Maison | Data · AI · Analytics</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script><script src="app.js" defer></script>
 </head>
 <body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html">Joel Maison<span>.</span></a>
-      <nav class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#about">About</a>
-        <a href="sports.html">Sports</a>
-        <a class="nav-cta" href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="kicker">Data · AI · Analytics</div>
-          <h1>Building systems that turn <span>data into decisions.</span></h1>
-          <p class="hero-copy">I'm Joel Maison. I work across machine learning, analytics, intelligent systems and data engineering — with a particular interest in practical tools that make information more useful.</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#work">See selected work ↓</a>
-            <a class="btn" href="https://github.com/joelmaison" target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a class="btn" href="sports.html">Sports analytics ↗</a>
-          </div>
-        </div>
-        <aside class="hero-card">
-          <small>Current focus</small>
-          <h3>AI systems, analytics engineering and applied machine learning.</h3>
-          <p>Graduate work at Carnegie Mellon, hands-on cloud and data projects, and a growing portfolio of systems built around real problems.</p>
-        </aside>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="Joel Maison, home">jm<span aria-hidden="true">.</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" hidden>Menu <span aria-hidden="true">+</span></button>
+    <nav id="navigation" aria-label="Main navigation"><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#about">About</a><a href="sports.html">Sports ↗</a><a class="nav-contact" href="#contact">Let’s talk ↗</a></nav>
+  </div></header>
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-topline"><span class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Data · AI · Analytics</span><span class="mono hero-location">Graduate student / Carnegie Mellon University</span></div>
+      <div class="hero-grid">
+        <div class="hero-intro"><h1 id="hero-title" aria-label="Joel Maison">Joel<br>Maison<span class="name-period">.</span></h1><h2>From complex data<br>to <em>useful systems.</em></h2><p>I build across machine learning, analytics and data engineering. My work turns questions into evidence and ideas into tools people can use.</p><div class="actions"><a class="button" href="#work">Explore selected work <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/joelmaison">GitHub ↗</a></div></div>
+        <figure class="hero-portrait"><img src="assets/images/joel-studio-portrait.jpg" alt="Joel Maison in a dark shirt against a light background" decoding="async" fetchpriority="high" width="4000" height="6000"><figcaption class="mono">Joel Maison / Data · AI · Analytics</figcaption></figure>
       </div>
+      <div class="hero-foot mono"><span>Research-minded. Built for practice.</span><a href="#work">Scroll to explore ↓</a></div>
     </section>
-
-    <div class="band"><div class="container band-track">Python ✦ SQL ✦ Machine Learning ✦ RAG ✦ FastAPI ✦ Azure ✦ PostgreSQL ✦ Docker ✦ Analytics ✦ Data Engineering ✦</div></div>
-
-    <section class="section" id="work">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="kicker">Selected work</div><h2>Projects with a point.</h2></div>
-          <p>Not a dump of every repository. These are the projects that best show how I think, build, analyze and communicate.</p>
-        </div>
-        <div class="filters">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="ai">AI & ML</button>
-          <button class="filter" data-filter="analytics">Analytics</button>
-          <button class="filter" data-filter="engineering">Data Engineering</button>
-          <button class="filter" data-filter="sports">Sports</button>
-        </div>
-        <div class="project-grid" id="project-list"></div>
-      </div>
+    <section class="section container" id="work" aria-labelledby="work-title">
+      <div class="section-heading"><div><span class="eyebrow">01 / Selected work</span><h2 id="work-title">Questions worth<br><em>working on.</em></h2></div><p>From evaluating AI answers to understanding environmental exposure. A selection of systems, analyses and the decisions behind them.</p></div>
+      <div class="work-toolbar"><div class="filters" role="group" aria-label="Filter selected projects"><button class="filter" data-filter="all" aria-pressed="true">All work</button><button class="filter" data-filter="ai" aria-pressed="false">AI & ML</button><button class="filter" data-filter="analytics" aria-pressed="false">Analytics</button><button class="filter" data-filter="engineering" aria-pressed="false">Data engineering</button></div><span id="project-count" class="mono" role="status" aria-live="polite"></span></div>
+      <div id="project-list"></div>
+      <noscript><p>Project summaries require JavaScript. Explore the <a href="https://github.com/joelmaison/afriball-rag">Basketball in Africa RAG system</a> and <a href="https://github.com/joelmaison/rec-league-app">The Rec league application</a> on GitHub, or enable JavaScript for the full portfolio.</p></noscript>
     </section>
-
-    <section class="section dark" id="experience">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="kicker">Experience</div><h2>Work that shaped the toolkit.</h2></div>
-          <p>Technical work, teaching and project experience across data, cloud systems, AI and academic environments.</p>
-        </div>
-        <div class="experience" id="experience-list"></div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <h2>Technical depth.<br>Human context.</h2>
-          <div class="about-copy">
-            <div class="kicker">About me</div>
-            <p>My work sits at the intersection of data, AI and people. At Carnegie Mellon, I've worked across question answering, machine learning, cloud infrastructure, environmental analytics and sports technology.</p>
-            <p>I'm especially interested in roles where analysis does not end with a notebook: the work has to become a reliable system, a useful product, or a decision someone can act on.</p>
-          </div>
-        </div>
-        <div class="pathways">
-          <a class="path-card" href="#work"><strong>Data & AI</strong><p>Machine learning, retrieval systems, analytics and cloud/data engineering.</p></a>
-          <a class="path-card" href="sports.html"><strong>Sports Analytics</strong><p>A dedicated path for basketball, football, sports modeling and community work.</p></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="kicker" style="color:#dfe3ff">Contact</div>
-        <h2>Let's build something useful.</h2>
-        <p>I'm interested in data, AI, analytics, research and engineering opportunities where strong technical work can have visible impact.</p>
-        <div class="contact-links">
-          <a class="btn primary" href="mailto:jmaison@andrew.cmu.edu">Email me ↗</a>
-          <a class="btn" href="https://github.com/joelmaison" target="_blank" rel="noreferrer">GitHub ↗</a>
-        </div>
-      </div>
-    </section>
+    <section class="experience-section" id="experience" aria-labelledby="experience-title"><div class="container section"><div class="section-heading"><div><span class="eyebrow">02 / Experience</span><h2 id="experience-title">Learning deeply.<br><em>Building practically.</em></h2></div><p>Graduate study, cloud infrastructure and teaching. In each setting, I work to make complex ideas useful.</p></div><div id="experience-list"></div></div></section>
+    <section class="section container about-section" id="about" aria-labelledby="about-title"><div><span class="eyebrow">03 / A little context</span><h2 id="about-title">Technical curiosity.<br><em>Human perspective.</em></h2><div class="about-note mono">Cameroonian roots.<br>International perspective.<br>French & English.</div></div><div class="about-copy"><p class="lead">I’m Joel, a graduate student at Carnegie Mellon University interested in what happens between a good question and a useful answer.</p><p>That interest takes me across retrieval-augmented generation, machine learning, environmental analytics and cloud infrastructure. I like work that asks me to understand the data, question the assumptions and build something that holds up in practice.</p><p>I’m exploring opportunities in data, AI, analytics, software and data engineering, and research, including roles in Canada.</p><div class="focus-list"><span class="eyebrow">Areas I work across</span><p>AI & machine learning / RAG & question answering / Analytics & statistics / Data & analytics engineering / Cloud infrastructure</p></div></div></section>
+    <section class="sports-path container" aria-labelledby="sports-path-title"><div><span class="eyebrow">A different lens on the same curiosity</span><h2 id="sports-path-title">And sometimes,<br>the data takes the <em>court.</em></h2><p>Basketball, sports models and the communities behind the game. Explore the other side of my work.</p><a class="button" href="sports.html">Explore sports & community ↗</a></div><div class="court-art" aria-hidden="true"><div class="court-line"></div><div class="court-circle"></div><div class="court-key"></div><span class="mono">The sports collection / JM</span></div></section>
+    <section class="section container" id="community" aria-labelledby="community-title"><div class="section-heading compact"><div><span class="eyebrow">04 / Beyond the data</span><h2 id="community-title">People first.</h2></div><p>Youth development, community basketball and a little creative work. The things that keep the technical work grounded.</p></div><div id="community-list" class="community-list" data-view="compact"></div></section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container"><span class="eyebrow">05 / Contact</span><h2 id="contact-title">Have a good question?<br><em>Let’s work on it.</em></h2><div class="contact-bottom"><p>For opportunities in data, AI, analytics and engineering, or a conversation about something worth building.</p><div class="contact-links" data-contact-links><a class="email-link" href="mailto:jmaison@andrew.cmu.edu">jmaison@andrew.cmu.edu ↗</a><a class="text-link" href="https://github.com/joelmaison">GitHub ↗</a></div></div></div></section>
   </main>
-
-  <footer><div class="container"><span>© 2026 Joel Maison</span><span>Data · AI · Analytics · Sports</span></div></footer>
-  <script src="data.js"></script><script src="app.js"></script>
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span data-year>2026</span> Joel Maison</span><span>Data · AI · Analytics</span><a href="#main">Back to top ↑</a></div></footer>
 </body>
 </html>
